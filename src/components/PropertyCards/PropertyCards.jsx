@@ -1,4 +1,8 @@
 import './PropertyCards.css'
+import karachiHeightsImg from '../../assets/images/karachi-heights.png'
+import northKarachiImg from '../../assets/images/north-karachi.png'
+import commercialPlazaImg from '../../assets/images/commercial-plaza.png'
+import businessComplexImg from '../../assets/images/business-complex.png'
 
 const PropertyCards = () => {
   const properties = [
@@ -6,57 +10,65 @@ const PropertyCards = () => {
       title: 'Luxury Urban Living',
       type: 'Apartment',
       bedrooms: '1, 2, 3',
-      price: 'AED 1,600,000',
-      size: '775 to 1,787 Sq Ft'
+      price: 'PKR 25,000,000',
+      size: '775 to 1,787 Sq Ft',
+      image: karachiHeightsImg
     },
     {
       title: 'Modern Apartment',
       type: 'Apartment',
-      bedrooms: '855 to 1,279 Sq Ft',
-      price: 'AED 1,700,000',
-      size: '752–1,533'
+      bedrooms: '1, 2, 3',
+      price: 'PKR 28,000,000',
+      size: '752 to 1,533 Sq Ft',
+      image: northKarachiImg
     },
     {
       title: 'Skyline Penthouse',
       type: 'Apartment',
       bedrooms: '1, 1.5 & 2',
-      price: 'AED 1,500,000',
-      size: '609 to 888 Sq Ft'
+      price: 'PKR 35,000,000',
+      size: '609 to 888 Sq Ft',
+      image: karachiHeightsImg
     },
     {
       title: 'Urban Residence',
       type: 'Apartment',
       bedrooms: '1, 2, 3',
-      price: 'AED 1,710,000',
-      size: '762 to 1,772 Sq Ft'
+      price: 'PKR 30,000,000',
+      size: '762 to 1,772 Sq Ft',
+      image: northKarachiImg
     },
     {
       title: 'City Luxe',
       type: 'Apartment',
       bedrooms: '1, 2, 3',
-      price: 'AED 1,700,000',
-      size: '708 to 4,510 Sq Ft.'
+      price: 'PKR 32,000,000',
+      size: '708 to 4,510 Sq Ft',
+      image: commercialPlazaImg
     },
     {
       title: 'Contempo Home',
       type: 'Apartment',
       bedrooms: '1, 2 & 3 Bedrooms',
-      price: 'AED 882,048',
-      size: '609 to 1,098 Sq Ft'
+      price: 'PKR 22,000,000',
+      size: '609 to 1,098 Sq Ft',
+      image: businessComplexImg
     },
     {
-      title: 'Contempo Home',
+      title: 'Garden View',
       type: 'Apartment',
       bedrooms: '1 & 2',
-      price: 'AED 979,000',
-      size: '674 to 1,145 Sq Ft'
+      price: 'PKR 20,000,000',
+      size: '674 to 1,145 Sq Ft',
+      image: karachiHeightsImg
     },
     {
       title: 'Nova Heights',
       type: 'Apartment',
       bedrooms: 'Studio, 1, 2 & 3 Bedrooms',
-      price: 'AED 599,000',
-      size: '397.51 to 2705.83 Sq Ft'
+      price: 'PKR 18,000,000',
+      size: '397 to 2,705 Sq Ft',
+      image: northKarachiImg
     }
   ]
 
@@ -67,9 +79,7 @@ const PropertyCards = () => {
           {properties.map((property, index) => (
             <div key={index} className="property-card-item">
               <div className="property-card-image">
-                <div className="property-card-placeholder">
-                  {property.title}
-                </div>
+                <img src={property.image} alt={property.title} className="property-card-img" />
               </div>
               <div className="property-card-content">
                 <h3 className="property-card-title">{property.title}</h3>

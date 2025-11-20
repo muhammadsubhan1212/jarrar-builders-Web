@@ -1,4 +1,5 @@
 import './Footer.css'
+import jbdLogo from '../../assets/images/JBD logo_2.png'
 
 const Footer = () => {
   return (
@@ -7,14 +8,13 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <div className="footer-logo-main">SKS</div>
-              <div className="footer-logo-sub">REAL ESTATE</div>
+              <img src={jbdLogo} alt="Jarrar Builders & Developers" className="footer-logo-image" />
             </div>
             <div className="footer-address">
               <h3>Address</h3>
               <p>
-                Dubai Hills Estate Business Park 4th, Office 204no<br />
-                Dubai – UAE, PO Box No : 453881
+                Shop no 1 R31 Sector 5A2 North Karachi<br />
+                Nearest to 4k Chowrangi, Karachi, Pakistan
               </p>
             </div>
           </div>
@@ -34,23 +34,23 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-section-title">Our Projects</h3>
             <ul className="footer-links">
-              <li><a href="/projects/aeon">Aeon</a></li>
-              <li><a href="/projects/lagoon">Lagoon</a></li>
-              <li><a href="/projects/48-parkside">48 Parkside</a></li>
-              <li><a href="/projects/riverside-crescent">Riverside Crescent</a></li>
-              <li><a href="/projects/sobha-verde">Sobha Verde</a></li>
-              <li><a href="/projects/ocean-tower">Ocean Tower</a></li>
-              <li><a href="/projects/orbis">Orbis Emaar</a></li>
+              <li><a href="/projects/north-karachi-residency">North Karachi Residency</a></li>
+              <li><a href="/projects/commercial-plaza">Sector 5A2 Commercial Plaza</a></li>
+              <li><a href="/projects/karachi-heights">Karachi Heights Apartments</a></li>
+              <li><a href="/projects/business-complex">Jarrar Business Complex</a></li>
+              <li><a href="/projects/riverside">Riverside Residences</a></li>
+              <li><a href="/projects/garden-villas">Garden View Villas</a></li>
+              <li><a href="/projects/metro-point">Metro Point Commercial</a></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            ©2025 SKS. All Rights Reserved.
+            ©2025 Jarrar Builders. All Rights Reserved.
           </p>
           <p className="footer-powered">
-            Powered by SKS Real Estate.
+            Powered by Jarrar Builders & Developers.
           </p>
         </div>
       </div>

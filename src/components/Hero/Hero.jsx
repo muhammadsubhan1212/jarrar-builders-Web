@@ -1,16 +1,24 @@
 import { useState } from 'react'
 import './Hero.css'
+import mainSection1 from '../../assets/images/main_section_1.png'
+import mainSection2 from '../../assets/images/main_section_2.png'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
     {
-      title: "LET'S FIND YOUR",
-      subtitle: "LUXURY PROPERTY IN DUBAI",
-      description: "Welcome to SKS Real Estate, your ultimate destination for finding the most exclusive luxury properties in Dubai."
+      title: "LET'S BUILD YOUR",
+      subtitle: "DREAM PROPERTY IN KARACHI",
+      description: "Welcome to Jarrar Builders, your trusted partner for residential & commercial construction, real-estate development, and turnkey projects in Karachi.",
+      image: mainSection1
+    },
+    {
+      title: "LET'S BUILD YOUR",
+      subtitle: "DREAM PROPERTY IN KARACHI",
+      description: "Welcome to Jarrar Builders, your trusted partner for residential & commercial construction, real-estate development, and turnkey projects in Karachi.",
+      image: mainSection2
     }
-    // Add more slides here if needed
   ]
 
   const nextSlide = () => {
@@ -23,9 +31,13 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero-background">
+      <div 
+        className="hero-background"
+        style={{
+          backgroundImage: `url(${slides[currentSlide].image})`
+        }}
+      >
         <div className="hero-overlay"></div>
-        {/* Background image will be added via CSS */}
       </div>
 
       <div className="hero-content">

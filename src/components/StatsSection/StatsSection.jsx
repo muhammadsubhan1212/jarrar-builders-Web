@@ -5,7 +5,7 @@ const StatsSection = () => {
     {
       number: '18+',
       label: 'Years of Experience',
-      description: 'LEAVING OUR SKS REAL ESTATE SINCE 2005'
+      description: 'LEADING JARRAR BUILDERS SINCE 2005'
     },
     {
       number: '0',
@@ -25,11 +25,11 @@ const StatsSection = () => {
     <section className="stats-section">
       <div className="stats-container">
         <div className="stats-header">
-          <h2 className="stats-title">LEAVING OUR SKS REAL ESTATE SINCE 2005</h2>
+          <h2 className="stats-title">LEADING JARRAR BUILDERS SINCE 2005</h2>
           <p className="stats-description">
-            What sets us apart is our ability to leverage state-of-the-art technology, 
-            cutting-edge data, and the human element to provide unmatched real estate 
-            guidance and full-scope support.
+            We specialize in residential & commercial construction, real-estate development, and turnkey projects. 
+            What sets us apart is our ability to leverage state-of-the-art technology, cutting-edge expertise, 
+            and the human element to provide unmatched construction and real estate services.
           </p>
         </div>
         <div className="stats-grid">

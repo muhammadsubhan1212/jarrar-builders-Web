@@ -26,21 +26,10 @@
   margin-bottom: 2rem;
 }
 
-.footer-logo-main {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: 'Georgia', serif;
-  color: #D4AF37;
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.footer-logo-sub {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: #D4AF37;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.footer-logo-image {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-address h3 {
@@ -115,6 +104,10 @@
 
   .footer-bottom {
     padding-top: 1.5rem;
+  }
+
+  .footer-logo-image {
+    height: 55px;
   }
 }
 

@@ -1,55 +1,62 @@
 import './PropertyListings.css'
+import northKarachiImg from '../../assets/images/north-karachi.png'
+import commercialPlazaImg from '../../assets/images/commercial-plaza.png'
+import karachiHeightsImg from '../../assets/images/karachi-heights.png'
+import businessComplexImg from '../../assets/images/business-complex.png'
+import karachiHeightsImg2 from '../../assets/images/karachi-heights.png'
+import northKarachiImg2 from '../../assets/images/north-karachi.png'
+import commercialPlazaImg2 from '../../assets/images/commercial-plaza.png'
 
 const PropertyListings = () => {
   const properties = [
     {
       id: 1,
-      name: 'Aeon',
-      price: 'AED 1,710,000',
-      description: 'Aeon, nestled within Dubai Creek Harbour, is a serene residential enclave that boasts breathtaking views of the Dubai skyline.',
-      image: 'aeon'
+      name: 'North Karachi Residency',
+      price: 'PKR 45,000,000',
+      description: 'A serene residential enclave in North Karachi, offering modern living with excellent connectivity to 4K Chowrangi and major city areas.',
+      image: northKarachiImg
     },
     {
       id: 2,
-      name: 'NAYA Lagoon Villas',
-      price: 'AED 1,700,000',
-      description: 'NAYA Lagoon Villas offer an exclusive living experience within the prestigious District One, featuring 3-bedroom villas that blend opulence with a serene lifestyle.',
-      image: 'naya-lagoon'
+      name: 'Sector 5A2 Commercial Plaza',
+      price: 'PKR 85,000,000',
+      description: 'Premium commercial development in Sector 5A2, North Karachi, featuring retail spaces and offices in a prime location near 4K Chowrangi.',
+      image: commercialPlazaImg
     },
     {
       id: 3,
-      name: '48 Parkside',
-      price: 'AED 882,048',
-      description: '48 Parkside, located in Arjan (Al Barsha South), Dubai, exemplifies modern luxury living with its upscale apartments.',
-      image: '48-parkside'
+      name: 'Karachi Heights Apartments',
+      price: 'PKR 25,000,000',
+      description: 'Modern luxury apartments in North Karachi, exemplifying contemporary living with upscale amenities and strategic location.',
+      image: karachiHeightsImg
     },
     {
       id: 4,
-      name: 'Sobha Verde',
-      price: 'AED 1,600,000',
-      description: 'Verde by Sobha is the premier residential project by Sobha Realty in Jumeirah Islands. This 58-story luxury landmark, situated opposite Jumeirah Islands, boasts a plethora of top-tier leisure and entertainment facilities.',
-      image: 'sobha-verde'
+      name: 'Jarrar Business Complex',
+      price: 'PKR 120,000,000',
+      description: 'A premier commercial project in North Karachi, featuring state-of-the-art facilities for businesses and retail establishments.',
+      image: businessComplexImg
     },
     {
       id: 5,
-      name: 'Ocean Tower',
-      price: 'AED 1,700,000',
-      description: 'Nested in the heart of the Dubai Islands, it\'s the epitome of coastal living. Experience the pulse of city life with stunning ocean views.',
-      image: 'ocean-tower'
+      name: 'Riverside Residences',
+      price: 'PKR 55,000,000',
+      description: 'Luxury residential project offering a perfect blend of modern architecture and serene living in North Karachi.',
+      image: karachiHeightsImg2
     },
     {
       id: 6,
-      name: 'Orbis',
-      price: 'AED 958,000',
-      description: 'Explore the meticulously crafted residences at SOBHA ORBIS, featuring intelligently planned apartments available in 1-2 bedroom layouts.',
-      image: 'orbis'
+      name: 'Garden View Villas',
+      price: 'PKR 35,000,000',
+      description: 'Exclusive villas featuring intelligently planned layouts with 3-4 bedrooms, perfect for families seeking luxury living.',
+      image: northKarachiImg2
     },
     {
       id: 7,
-      name: '360 Riverside Crescent',
-      price: 'AED 1,500,000',
-      description: '360 Riverside Crescent Located in the heart of Sobha Hartland II, 360 Riverside Crescent is the latest jewel to grace this vibrant community.',
-      image: '360-riverside'
+      name: 'Metro Point Commercial',
+      price: 'PKR 95,000,000',
+      description: 'Strategic commercial development located in the heart of North Karachi, offering prime retail and office spaces.',
+      image: commercialPlazaImg2
     }
   ]
 
@@ -60,9 +67,7 @@ const PropertyListings = () => {
           {properties.map((property) => (
             <div key={property.id} className="property-card">
               <div className="property-image">
-                <div className="property-image-placeholder">
-                  {property.image}
-                </div>
+                <img src={property.image} alt={property.name} className="property-image-img" />
               </div>
               <div className="property-content">
                 <h3 className="property-name">{property.name}</h3>

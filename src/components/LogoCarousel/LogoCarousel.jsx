@@ -1,22 +1,32 @@
 import './LogoCarousel.css'
+import partnerConstructionMaterials from '../../assets/images/partner-construction-materials.png'
+import partnerBankFinancial from '../../assets/images/partner-bank-financial.png'
+import partnerArchitectureFirm from '../../assets/images/partner-architecture-firm.png'
 
 const LogoCarousel = () => {
-  // Logo data - you can replace with actual logo images
-  const logos = Array.from({ length: 14 }, (_, i) => `Logo ${i + 1}`)
+  // Logo images array
+  const logos = [
+    partnerConstructionMaterials,
+    partnerBankFinancial,
+    partnerArchitectureFirm
+  ]
+
+  // Repeat logos to fill the carousel (5 times for smooth scrolling)
+  const repeatedLogos = Array.from({ length: 5 }, () => logos).flat()
 
   return (
     <section className="logo-carousel-section">
       <div className="logo-carousel-container">
         <div className="logo-carousel-track">
-          {logos.map((logo, index) => (
+          {repeatedLogos.map((logo, index) => (
             <div key={index} className="logo-item">
-              <div className="logo-placeholder">{logo}</div>
+              <img src={logo} alt="Partner logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
           ))}
           {/* Duplicate for infinite scroll effect */}
-          {logos.map((logo, index) => (
+          {repeatedLogos.map((logo, index) => (
             <div key={`duplicate-${index}`} className="logo-item">
-              <div className="logo-placeholder">{logo}</div>
+              <img src={logo} alt="Partner logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
           ))}
         </div>
