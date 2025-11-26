@@ -2,7 +2,7 @@ import './FloatingButtons.css'
 
 const FloatingButtons = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/923122248654', '_blank')
+    window.open('https://wa.me/923148038964', '_blank')
   }
 
   const handleEmail = () => {
@@ -10,7 +10,7 @@ const FloatingButtons = () => {
   }
 
   const handlePhone = () => {
-    window.location.href = 'tel:+923122248654'
+    window.location.href = 'tel:+923148038964'
   }
 
   return (

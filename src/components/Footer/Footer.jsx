@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 import jbdLogo from '../../assets/images/JBD logo_2.png'
 
@@ -22,25 +23,25 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-section-title">About Us</h3>
             <ul className="footer-links">
-              <li><a href="/about-us">About Us</a></li>
-              <li><a href="/contact-us">Contact Us</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/">Home</a></li>
-              <li><a href="/our-teams">Our Teams</a></li>
-              <li><a href="/contact-us">Get Expert Help</a></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/our-teams">Our Teams</Link></li>
+              <li><Link to="/contact-us">Get Expert Help</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h3 className="footer-section-title">Our Projects</h3>
             <ul className="footer-links">
-              <li><a href="/projects/north-karachi-residency">North Karachi Residency</a></li>
-              <li><a href="/projects/commercial-plaza">Sector 5A2 Commercial Plaza</a></li>
-              <li><a href="/projects/karachi-heights">Karachi Heights Apartments</a></li>
-              <li><a href="/projects/business-complex">Jarrar Business Complex</a></li>
-              <li><a href="/projects/riverside">Riverside Residences</a></li>
-              <li><a href="/projects/garden-villas">Garden View Villas</a></li>
-              <li><a href="/projects/metro-point">Metro Point Commercial</a></li>
+              <li><Link to="/projects">North Karachi Residency</Link></li>
+              <li><Link to="/projects">Sector 5A2 Commercial Plaza</Link></li>
+              <li><Link to="/projects">Karachi Heights Apartments</Link></li>
+              <li><Link to="/projects">Jarrar Business Complex</Link></li>
+              <li><Link to="/projects">Riverside Residences</Link></li>
+              <li><Link to="/projects">Garden View Villas</Link></li>
+              <li><Link to="/projects">Metro Point Commercial</Link></li>
             </ul>
           </div>
         </div>
