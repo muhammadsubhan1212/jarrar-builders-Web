@@ -24,7 +24,8 @@ const ContactUs = () => {
     try {
       setIsSubmitting(true)
 
-      // Use relative URL for Vercel deployment, fallback to localhost for development
+      // Use Vercel backend URL (from env) or fallback to localhost for development
+      // VITE_API_URL should be set to your Vercel backend URL (e.g., https://your-backend.vercel.app)
       const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3001' : '')
       const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
