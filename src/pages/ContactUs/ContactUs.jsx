@@ -24,27 +24,9 @@ const ContactUs = () => {
     try {
       setIsSubmitting(true)
 
-      // Determine API endpoint based on environment
-      // Development: use local Node server
-      // Production with VITE_API_URL: use custom backend
-      // Production: use PHP on Hostinger, serverless on Vercel
-      let apiEndpoint
-      if (import.meta.env.VITE_API_URL) {
-        // Custom backend URL (if set)
-        apiEndpoint = `${import.meta.env.VITE_API_URL}/api/contact`
-      } else if (import.meta.env.DEV) {
-        // Development: use local Node server
-        apiEndpoint = 'http://localhost:3001/api/contact'
-      } else {
-        // Production: Use PHP for Hostinger, serverless for Vercel
-        // Vercel will handle /api/contact via vercel.json rewrites
-        // Hostinger will use /api/contact.php
-        // Try PHP first (Hostinger), fallback to serverless (Vercel)
-        const isVercel = window.location.hostname.includes('vercel.app')
-        apiEndpoint = isVercel ? '/api/contact' : '/api/contact.php'
-      }
-      
-      const response = await fetch(apiEndpoint, {
+      // Use relative URL for Vercel deployment, fallback to localhost for development
+      const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3001' : '')
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
