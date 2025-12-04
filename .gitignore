@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Environment variables
+.env
+server/.env
+
+# Server directory (not needed for Vercel deployment)
+# server/node_modules
